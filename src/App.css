@@ -26,6 +26,7 @@ section>div {
   text-transform: uppercase;
   transform: translate3d(0px, 100px, 0px);
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Intro CSS */
@@ -115,7 +116,7 @@ section>div {
   position: relative;
 }
 
-.img-wrapper {
+.skills-img-wrapper {
   width: 20%;
   min-width: 170px;
   margin: 3px 1px;
@@ -124,9 +125,10 @@ section>div {
   overflow: hidden;
   transform: translate3d(-300px, 0px, 0px);
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
-.img-wrapper img {
+.skills-img-wrapper img {
   width: 90%;
   display: block;
   margin: auto;
@@ -171,6 +173,7 @@ section>div {
   flex-wrap: wrap;
   transform: translate3d(0, 100px, 0);
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .marks-solo-container {
@@ -193,6 +196,7 @@ section>div {
   width: 100%;
   transform: translate3d(300px, 0, 0);
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 /* ProjectSlider CSS */
@@ -363,7 +367,7 @@ body {
 .active {
   transform: translate3d(0, 0, 0) !important;
   opacity: 1 !important;
-  transition: all 1s ease;
+  transition: all 1s ease !important;
 }
 
 .select-disabled {

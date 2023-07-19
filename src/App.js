@@ -1,10 +1,10 @@
 import './App.css';
 import CustomMouseTrail from './components/CustomMouseTrail';
 import Intro from './components/Intro';
-import Carousel from './components/Carousel';
 import Skills from './components/Skills';
 import Marks from './components/Marks';
 import Projects from './components/Projects';
+import ContactPage from './components/ContactPage';
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
         <Skills />
         <Marks />
         <Projects />
-        <Carousel />
+        <ContactPage />
         <CustomMouseTrail />
       </div >
     </>

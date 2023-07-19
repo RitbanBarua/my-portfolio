@@ -15,7 +15,7 @@ export default function Intro() {
                     </div>
                 </div>
                 <div className='reveal' id="intro-right">
-                    <img id='dev-img' src={devImg} alt="dev" />
+                    <img id='dev-img' src={devImg} alt="dev" draggable="false" />
                 </div>
             </div>
         </>

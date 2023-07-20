@@ -219,6 +219,52 @@ section>div {
   object-position: 100% center;
 }
 
+/* ContactPage CSS */
+
+#contact-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#contact-form-container{
+  margin: auto;
+  padding: 3rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-form-container h3{
+  font-size: 1.4rem;
+}
+
+#contact-form-container form{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+#contact-other-container{
+  padding: 3rem;
+}
+
+#contact-other-container > div{
+  width: 255px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#contact-other-container a{
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
 /* Carousel CSS */
 
 body {
@@ -379,3 +425,4 @@ body {
 }
 
 /* https://codepen.io/Hyperplexed/pen/MWXBRBp */
+/* https://codepen.io/Hyperplexed/full/rNrJgrd */

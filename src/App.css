@@ -336,6 +336,22 @@ section>div {
   color: var(--primary-text-color);
 }
 
+/* Footer CSS */
+
+#footer-container{
+  text-align: center;
+  border-top: 0.5px dotted var(--primary-text-color);
+  padding: 30px 5px;
+}
+
+#footer-container a{
+  text-decoration: none;
+  /* font-family: 'Ubuntu';
+  font-size: 1.1rem; */
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
 /* Carousel CSS */
 
 body {

@@ -5,6 +5,7 @@ import Skills from './components/Skills';
 import Marks from './components/Marks';
 import Projects from './components/Projects';
 import ContactPage from './components/ContactPage';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Marks />
         <Projects />
         <ContactPage />
+        <Footer />
         <CustomMouseTrail />
       </div >
     </>

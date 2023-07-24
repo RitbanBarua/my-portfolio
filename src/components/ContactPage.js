@@ -10,30 +10,30 @@ export default function ContactPage() {
             {/* <span>or you can contact via email: <a href="mailto:ritbanbarua2@gmail.com" target="_top">ritbanbarua2@gmail.com</a></span> */}
             <div className='container reveal' id="contact-form-container">
               <h3>Contact Form</h3>
-              <form action="mailto:ritbanbarua2@gmail.com" method="post" enctype="text/plain">
+              <form action="mailto:ritbanbarua2@gmail.com" method="post" encType="text/plain">
                 <div className="contact-input-wrapper" id="contact-name-wrapper">
                   <input type="text" id='input-name' name="user_name" required/>
-                  <label for="input-name">Name</label>
+                  <label htmlFor="input-name">Name</label>
                 </div>
                 <div className="contact-input-wrapper" id="contact-email-wrapper">
                   <input type="email" id='input-email' name="user_email" required/>
-                  <label for="input-email">Email</label>
+                  <label htmlFor="input-email">Email</label>
                 </div>
                 <div className="contact-input-wrapper" id="contact-desc-wrapper">
                   <textarea id='input-msg' rows={1} name="message" required/>
-                  <label for='input-msg'>Message</label>
+                  <label htmlFor='input-msg'>Message</label>
                 </div>
-                <input type="submit" value="Send" />
+                <input className='btn submit-btn' type="submit" value="Send" />
               </form>
             </div>
             {/* <div className="border-divider"></div> */}
             <div className='reveal' id="contact-other-container">
               <div id="contact-email">
-                <i class="fa-regular fa-envelope fa-xl" style={{ color: "#ffffff" }}></i>
+                <i className="fa-regular fa-envelope fa-xl" style={{ color: "#ffffff" }}></i>
                 <a href="mailto:ritbanbarua2@gmail.com">ritbanbarua2@gmail.com</a>
               </div>
               <div id="contact-linkedin">
-                <i class="fa-brands fa-linkedin fa-xl" style={{ color: "#ffffff" }}></i>
+                <i className="fa-brands fa-linkedin fa-xl" style={{ color: "#ffffff" }}></i>
                 <a href="mailto:ritbanbarua2@gmail.com">ritbanbarua2@gmail.com</a>
               </div>
             </div>

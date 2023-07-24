@@ -10,6 +10,7 @@
   --primary-text-color: #fff;
   --secondary-text-color: rgba(170, 107, 228, 1);
   --main-bg-color: #04010f;
+  --btn-color: #1e2167;
 }
 
 section>div {
@@ -24,9 +25,37 @@ section>div {
   font-size: 1.8rem;
   font-family: 'Ubuntu', 'Poppins';
   text-transform: uppercase;
+  text-align: center;
   transform: translate3d(0px, 100px, 0px);
   opacity: 0;
   transition: all 0.5s ease-in-out;
+}
+
+/* Navbar CSS */
+
+#nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px;
+}
+
+nav a{
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 3px 5px;
+  margin: 0px 10px;
+  text-transform: uppercase;
+  border-bottom: 3px solid white;
+  background-color: #1e2167;
+}
+
+#nav-hamburger-btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* Intro CSS */
@@ -65,7 +94,7 @@ section>div {
   margin: 0px 8px;
 }
 
-.btn-container button {
+.btn-container button, .btn {
   border: 2px solid var(--primary-text-color);
   font-size: 20px;
   cursor: pointer;
@@ -76,9 +105,9 @@ section>div {
 
 #intro-btn-container button {
   border-radius: 6px;
-  margin: 0px 9px;
+  margin: 4px 9px;
   font-size: 20px;
-  background-color: #1e2167;
+  background-color: var(--btn-color);
   color: var(--primary-text-color);
 }
 
@@ -94,6 +123,30 @@ section>div {
 
 #dev-img {
   width: 75%;
+  min-width: 200px;
+}
+
+@media only screen and (max-width: 1300px) {
+  #intro-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dev-img{
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .typedjs-container{
+    height: 150px;
+  }
+
+  #dev-img{
+    width: 95%;
+  }
 }
 
 /* Skills CSS */
@@ -303,6 +356,13 @@ section>div {
   cursor: unset;
 }
 
+.submit-btn{
+  margin-top: 5px;
+  border-radius: 20px;
+  font-weight: 700;
+  background-color: var(--primary-text-color);
+}
+
 /* .border-divider{
   border-top: 0.5px solid var(--primary-text-color);
   border-bottom: 0.5px solid var(--primary-text-color);
@@ -334,6 +394,31 @@ section>div {
   font-size: 1.1rem;
   text-decoration: none;
   color: var(--primary-text-color);
+}
+
+@media only screen and (max-width: 1150px){
+
+  #contact-page-container{
+    margin-top: 100px;
+  }
+
+  #contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  #contact-form-container{
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #contact-form-container{
+    padding: 2.5rem 0.1rem;
+  }
 }
 
 /* Footer CSS */
@@ -467,6 +552,12 @@ body {
   /* Cursor */
   font-size: 2rem;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 500px){
+  .typedjs-container{
+    height: 150px;
+  }
 }
 
 /* Custom Mouse Trail CSS */

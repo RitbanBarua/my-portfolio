@@ -10,8 +10,8 @@ export default function Intro() {
                 <div className='reveal' id="intro-left">
                     <TypedJS strings={[`<h1>Hi, My Name Is <span id="name">Ritban Barua</span></h1>`,`<h1>And I am a passionate <span id="role">Web Developer</span></h1>`]}/>
                     <div className="btn-container" id="intro-btn-container">
-                        <button>Resume</button>
-                        <button>Github</button>
+                        <button className='btn'>Resume</button>
+                        <button className='btn'>Github</button>
                     </div>
                 </div>
                 <div className='reveal' id="intro-right">

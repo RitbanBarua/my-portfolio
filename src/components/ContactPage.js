@@ -1,26 +1,60 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
+
+  // const submitContactForm = () => {
+  //   let name = document.getElementById('input-name').value;
+  //   let email = document.getElementById('input-email').value;
+  //   let message = document.getElementById('input-msg').value;
+
+  //   window.Email.send({
+  //     Host: "smtp.elasticemail.com",
+  //     Username: "8nm0som3ll@pirolsnet.com",
+  //     Password: "1F06B07781702ACBA6F0AA03751F298F31AA",
+  //     To: '8nm0som3ll@pirolsnet.com',
+  //     From: "8nm0som3ll@pirolsnet.com",
+  //     Subject: "Portfolio Contact Form Submission",
+  //     Body: `Name: ${name},
+  //     Email: ${email},
+  //     Message:${message}`
+  //   }).then(
+  //     message => console.log(message)
+  //   );
+  // }
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('portfolio_contact_form', 'portfolio_contact_temp', form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <>
       <section>
         <div className="container" id="contact-page-container">
           <h2 className="section-title reveal">Interested? Let's Talk!</h2>
           <div className="container reveal" id="contact-container">
-            {/* <span>or you can contact via email: <a href="mailto:ritbanbarua2@gmail.com" target="_top">ritbanbarua2@gmail.com</a></span> */}
             <div className='container reveal' id="contact-form-container">
               <h3>Contact Form</h3>
-              <form action="mailto:ritbanbarua2@gmail.com" method="post" encType="text/plain">
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="contact-input-wrapper" id="contact-name-wrapper">
-                  <input type="text" id='input-name' name="user_name" required/>
+                  <input type="text" id='input-name' name="user_name" required />
                   <label htmlFor="input-name">Name</label>
                 </div>
                 <div className="contact-input-wrapper" id="contact-email-wrapper">
-                  <input type="email" id='input-email' name="user_email" required/>
+                  <input type="email" id='input-email' name="user_email" required />
                   <label htmlFor="input-email">Email</label>
                 </div>
                 <div className="contact-input-wrapper" id="contact-desc-wrapper">
-                  <textarea id='input-msg' rows={1} name="message" required/>
+                  <textarea id='input-msg' rows={1} name="message" required />
                   <label htmlFor='input-msg'>Message</label>
                 </div>
                 <input className='btn submit-btn' type="submit" value="Send" />

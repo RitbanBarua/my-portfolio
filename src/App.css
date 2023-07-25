@@ -366,6 +366,7 @@ nav a{
 #contact-form-container textarea:-webkit-autofill:active{
   transition: background-color 5000s;
   -webkit-text-fill-color: var(--primary-text-color) !important;
+  caret-color: var(--primary-text-color);
 }
 
 .submit-btn{
@@ -396,7 +397,7 @@ nav a{
   width: 255px;
   margin: 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 

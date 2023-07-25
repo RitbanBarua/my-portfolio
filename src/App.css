@@ -356,6 +356,18 @@ nav a{
   cursor: unset;
 }
 
+#contact-form-container input:-webkit-autofill,                 /* Fixed a color issue for autofill on input element */
+#contact-form-container input:-webkit-autofill:hover,
+#contact-form-container input:-webkit-autofill:focus,
+#contact-form-container input:-webkit-autofill:active,
+#contact-form-container textarea:-webkit-autofill,                 /* Fixed a color issue for autofill on textarea element */
+#contact-form-container textarea:-webkit-autofill:hover,
+#contact-form-container textarea:-webkit-autofill:focus,
+#contact-form-container textarea:-webkit-autofill:active{
+  transition: background-color 5000s;
+  -webkit-text-fill-color: var(--primary-text-color) !important;
+}
+
 .submit-btn{
   margin-top: 5px;
   border-radius: 20px;

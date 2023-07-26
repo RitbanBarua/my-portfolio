@@ -8,11 +8,9 @@ export default function Navbar() {
     document.getElementById('nav-hamburger-btn').classList.toggle('nav-btn-show');
     document.getElementById('nav-cross-btn').classList.toggle('nav-btn-show');
     (!dropdownState) ? setDropdownState(true) : setDropdownState(false);
-    console.log(dropdownState);
   }
 
   useEffect(() => {
-    console.log(dropdownState);
     const navbar1 = document.querySelector("nav");
     const dropdownMenu = document.getElementById("nav-dropdown-container");
 

@@ -9,7 +9,6 @@ export default function GoToTopButton() {
 
     useEffect(() => {
         const goTopBtn = document.getElementById("go-to-top-btn");
-        console.log(goTopBtn)
 
         const toggleGoTopBtn = () => {
             if (document.body.scrollTop > window.innerHeight ||

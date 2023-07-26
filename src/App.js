@@ -6,6 +6,7 @@ import Marks from './components/Marks';
 import Projects from './components/Projects';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
+import GoToTopButton from './components/GoToTopButton';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Projects />
         <ContactPage />
         <Footer />
+        <GoToTopButton />
         <CustomMouseTrail />
       </div >
     </>

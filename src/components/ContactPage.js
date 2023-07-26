@@ -68,7 +68,7 @@ export default function ContactPage() {
               </div>
               <div id="contact-linkedin">
                 <i className="fa-brands fa-linkedin fa-xl" style={{ color: "#ffffff" }}></i>
-                <a href="mailto:ritbanbarua2@gmail.com">ritbanbarua2@gmail.com</a>
+                <a target='_blank' rel='noreferrer' href="https://www.linkedin.com/in/ritbanbarua/">Ritban Barua</a>
               </div>
             </div>
           </div>

@@ -13,6 +13,10 @@
   --btn-color: #1e2167;
 }
 
+.container {
+  width: 100%;
+}
+
 section>div {
   min-height: 100vh;
   display: flex;
@@ -33,14 +37,33 @@ section>div {
 
 /* Navbar CSS */
 
-#nav-container{
+nav {
+  width: 100%;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+}
+
+.nav-dropdown-active {
+  height: 346px;
+  transition: all 1s ease;
+}
+
+#nav-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#nav-pc-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 5px;
+  width: 50%;
+  margin-left: 20px;
 }
 
-nav a{
+#nav-pc-links a, #nav-dropdown-container ul a{
   text-decoration: none;
   color: var(--primary-text-color);
   font-size: 1.1rem;
@@ -48,14 +71,103 @@ nav a{
   padding: 3px 5px;
   margin: 0px 10px;
   text-transform: uppercase;
-  border-bottom: 3px solid white;
-  background-color: #1e2167;
 }
 
-#nav-hamburger-btn{
+#nav-pc-links a:hover, #nav-dropdown-container ul a:hover{
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+#nav-pc-links a:active, #nav-dropdown-container ul a:active{
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+
+#nav-mob-btn-container {
+  display: none;
+  position: relative;
+  width: 36px;
+  height: 22px;
+}
+
+.nav-btn {
+  display: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  z-index: 50;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-btn-show {
+  display: inline-block !important;
+  opacity: 1 !important;
+}
+
+#nav-pc-btn-container button{
+  color:var(--primary-text-color) ;
+  background-color: var(--btn-color);
+  margin: 2px 5px;
+  border-radius: 7px;
+}
+
+#nav-dropdown-container {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 10px;
+  background-color: #292A38;
+  border: 1px solid white;
+  opacity: 0;
+  /* transform: translate3d(200px, 0, 0);
+  transition: all 0.5s ease; */
+}
+
+#empty {
+  width: 100%;
+}
+
+#nav-dropdown-btn-container{
+  width: calc(100% - 22px);
+}
+
+#nav-dropdown-btn-container button{
+  color:var(--primary-text-color) ;
+  background-color: var(--btn-color);
+  margin: 2px 5px;
+  border-radius: 7px;
+}
+
+#nav-dropdown-container ul {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+#nav-dropdown-container ul li {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1200px) {
+  #nav-pc-links{
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #nav-pc-links, #nav-pc-btn-container{
+    display: none;
+  }
+
+  #nav-mob-btn-container, #nav-dropdown-container{
+    display: block;
+  }
 }
 
 /* Intro CSS */
@@ -94,13 +206,18 @@ nav a{
   margin: 0px 8px;
 }
 
-.btn-container button, .btn {
+.btn-container button,
+.btn {
   border: 2px solid var(--primary-text-color);
   font-size: 20px;
   cursor: pointer;
   font-weight: 600;
   padding: 3px 8px;
   font-family: 'Proza Libre', 'Poppins', sans-serif;
+}
+
+.btn-container button i{
+  margin-right: 4.5px;
 }
 
 #intro-btn-container button {
@@ -127,24 +244,24 @@ nav a{
 }
 
 @media only screen and (max-width: 1300px) {
-  #intro-container{
+  #intro-container {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
 
-  #dev-img{
+  #dev-img {
     max-width: 500px;
   }
 }
 
-@media only screen and (max-width: 500px){
-  .typedjs-container{
+@media only screen and (max-width: 500px) {
+  .typedjs-container {
     height: 150px;
   }
 
-  #dev-img{
+  #dev-img {
     width: 95%;
   }
 }
@@ -274,7 +391,7 @@ nav a{
 
 /* ContactPage CSS */
 
-#contact-container{
+#contact-container {
   width: 100%;
   /* display: flex;
   justify-content: center;
@@ -284,7 +401,7 @@ nav a{
   grid-template-columns: repeat(2, 1fr);
 }
 
-#contact-form-container{
+#contact-form-container {
   /* width: calc(50% - 0.5px); */
   margin: auto;
   padding: 2.5rem 3rem;
@@ -298,29 +415,30 @@ nav a{
   transition: all 0.4s ease-in-out;
 }
 
-#contact-form-container h3{
+#contact-form-container h3 {
   font-size: 1.4rem;
 }
 
-#contact-form-container form{
+#contact-form-container form {
   display: flex;
   flex-direction: column;
   width: 70%;
 }
 
-.contact-input-wrapper{
+.contact-input-wrapper {
   height: 40px;
   width: 100%;
   margin: 10px 0px;
   position: relative;
 }
 
-#contact-desc-wrapper{
+#contact-desc-wrapper {
   height: 45px;
   margin: 15px 0px;
 }
 
-.contact-input-wrapper input, .contact-input-wrapper textarea{
+.contact-input-wrapper input,
+.contact-input-wrapper textarea {
   width: 100%;
   height: 100%;
   outline: none;
@@ -331,7 +449,7 @@ nav a{
   resize: none;
 }
 
-.contact-input-wrapper label{
+.contact-input-wrapper label {
   position: absolute;
   top: 25%;
   left: 1px;
@@ -340,36 +458,38 @@ nav a{
   transition: all 0.3s ease;
 }
 
-.contact-input-wrapper input:focus ~ label,
-.contact-input-wrapper input:valid ~ label {
+.contact-input-wrapper input:focus~label,
+.contact-input-wrapper input:valid~label {
   transform: translateY(-20px);
   font-size: 0.9rem;
   color: var(--primary-text-color);
   cursor: unset;
 }
 
-.contact-input-wrapper textarea:focus ~ label,
-.contact-input-wrapper textarea:valid ~ label {
+.contact-input-wrapper textarea:focus~label,
+.contact-input-wrapper textarea:valid~label {
   transform: translateY(-30px);
   font-size: 0.9rem;
   color: var(--primary-text-color);
   cursor: unset;
 }
 
-#contact-form-container input:-webkit-autofill,                 /* Fixed a color issue for autofill on input element */
+#contact-form-container input:-webkit-autofill,
+/* Fixed a color issue for autofill on input element */
 #contact-form-container input:-webkit-autofill:hover,
 #contact-form-container input:-webkit-autofill:focus,
 #contact-form-container input:-webkit-autofill:active,
-#contact-form-container textarea:-webkit-autofill,                 /* Fixed a color issue for autofill on textarea element */
+#contact-form-container textarea:-webkit-autofill,
+/* Fixed a color issue for autofill on textarea element */
 #contact-form-container textarea:-webkit-autofill:hover,
 #contact-form-container textarea:-webkit-autofill:focus,
-#contact-form-container textarea:-webkit-autofill:active{
+#contact-form-container textarea:-webkit-autofill:active {
   transition: background-color 5000s;
   -webkit-text-fill-color: var(--primary-text-color) !important;
   caret-color: var(--primary-text-color);
 }
 
-.submit-btn{
+.submit-btn {
   margin-top: 5px;
   border-radius: 20px;
   font-weight: 700;
@@ -381,7 +501,7 @@ nav a{
   border-bottom: 0.5px solid var(--primary-text-color);
 } */
 
-#contact-other-container{
+#contact-other-container {
   /* width: calc(50% - 0.5px); */
   padding: 3rem;
   display: flex;
@@ -393,7 +513,7 @@ nav a{
   transition: all 0.4s ease-in-out;
 }
 
-#contact-other-container > div{
+#contact-other-container>div {
   width: 255px;
   margin: 1rem;
   display: flex;
@@ -401,7 +521,7 @@ nav a{
   align-items: center;
 }
 
-#contact-other-container a{
+#contact-other-container a {
   margin-left: 10px;
   font-weight: 500;
   font-size: 1.1rem;
@@ -409,13 +529,13 @@ nav a{
   color: var(--primary-text-color);
 }
 
-@media only screen and (max-width: 1150px){
+@media only screen and (max-width: 1150px) {
 
-  #contact-page-container{
+  #contact-page-container {
     margin-top: 100px;
   }
 
-  #contact-container{
+  #contact-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -423,31 +543,60 @@ nav a{
     margin-top: 50px;
   }
 
-  #contact-form-container{
+  #contact-form-container {
     border: none;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  #contact-form-container{
+  #contact-form-container {
     padding: 2.5rem 0.1rem;
   }
 }
 
 /* Footer CSS */
 
-#footer-container{
+#footer-container {
   text-align: center;
   border-top: 0.5px dotted var(--primary-text-color);
   padding: 30px 5px;
 }
 
-#footer-container a{
+#footer-container a {
   text-decoration: none;
   /* font-family: 'Ubuntu';
   font-size: 1.1rem; */
   font-weight: 500;
   color: var(--secondary-text-color);
+}
+
+/* Go To Top Button JS */
+
+#go-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+  opacity: .8 !important;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+  transition: all 0.2s ease-in-out;
+}
+
+#go-to-top-btn:hover, #go-to-top-btn:active{
+  opacity: 1 !important;
+}
+
+.go-to-top-btn-active{
+  display: block !important;
+  opacity: 1;
 }
 
 /* Carousel CSS */
@@ -567,8 +716,8 @@ body {
   font-weight: 500;
 }
 
-@media only screen and (max-width: 500px){
-  .typedjs-container{
+@media only screen and (max-width: 500px) {
+  .typedjs-container {
     height: 150px;
   }
 }
@@ -596,10 +745,6 @@ body {
 }
 
 /* Misc CSS */
-
-.container {
-  width: 100%;
-}
 
 .active {
   transform: translate3d(0, 0, 0) !important;

@@ -6,6 +6,7 @@ import Marks from './components/Marks';
 import Projects from './components/Projects';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import GoToTopButton from './components/GoToTopButton';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <Navbar />
         <Intro />
         <Skills />
         <Marks />

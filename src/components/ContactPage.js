@@ -38,7 +38,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <section>
+      <section id='contact'>
         <div className="container" id="contact-page-container">
           <h2 className="section-title reveal">Interested? Let's Talk!</h2>
           <div className="container reveal" id="contact-container">

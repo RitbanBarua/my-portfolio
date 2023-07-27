@@ -7,7 +7,7 @@ import reactLogo from '../assesets/REACT 3D.png'
 export default function Skills() {
   return (
     <>
-      <section>
+      <section id='skills'>
         <div className='container' id='skills-container'>
           <h2 className='section-title reveal'>Skills</h2>
           <div className="container" id='skills-img-container'>

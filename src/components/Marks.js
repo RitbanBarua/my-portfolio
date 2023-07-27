@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 export default function Marks() {
   return (
     <>
-      <section>
+      <section id='marks'>
         <div className="container" id="marks-container">
           <h2 className='section-title reveal'>Marks</h2>
           <div className="container reveal" id="marks-count-container">

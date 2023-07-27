@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 export default function Navbar() {
   const [dropdownState, setDropdownState] = useState(false);
-  let current = "";
 
   const toggleNav = (e) => {
     e.preventDefault();
@@ -12,6 +11,7 @@ export default function Navbar() {
   }
 
   useEffect(() => {
+    let current = "";
     const sections = document.querySelectorAll("section");
     const navLi = document.querySelectorAll("#nav-pc-links a")
     window.addEventListener("scroll", () => {

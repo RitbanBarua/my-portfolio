@@ -13,7 +13,7 @@ export default function Navbar() {
   useEffect(() => {
     let current = "";
     const sections = document.querySelectorAll("section");
-    const navLi = document.querySelectorAll("#nav-pc-links a")
+    const navLi = document.querySelectorAll(".nav-section-link");
     window.addEventListener("scroll", () => {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
@@ -23,6 +23,7 @@ export default function Navbar() {
         }
         navLi.forEach((li) => {
           li.classList.remove("nav-li-active");
+          li.style.border = "none";              // Fixed a bug where underline remains after selecting a nav-section-link and scroll to other section
           if (li.classList.contains(current)) {
             li.classList.add("nav-li-active");
           }
@@ -128,11 +129,11 @@ export default function Navbar() {
             </div>
           </div>
           <ul>
-            <a className='nav-section-link' data-value="HOME" href="#intro-container"><li>Home</li></a>
-            <a className='nav-section-link' data-value="SKILLS" href="#skills-container"><li>Skills</li></a>
-            <a className='nav-section-link' data-value="MARKS" href="#marks-container"><li>Marks</li></a>
-            <a className='nav-section-link' data-value="PROJECTS" href="#projects-container"><li>Projects</li></a>
-            <a className='nav-section-link' data-value="CONTACT" href="#contact-page-container"><li>Contact</li></a>
+            <a className='nav-section-link home nav-li-active' data-value="HOME" href="#intro-container"><li>Home</li></a>
+            <a className='nav-section-link skills' data-value="SKILLS" href="#skills-container"><li>Skills</li></a>
+            <a className='nav-section-link marks' data-value="MARKS" href="#marks-container"><li>Marks</li></a>
+            <a className='nav-section-link projects' data-value="PROJECTS" href="#projects-container"><li>Projects</li></a>
+            <a className='nav-section-link contact' data-value="CONTACT" href="#contact-page-container"><li>Contact</li></a>
           </ul>
         </div>
       </nav>

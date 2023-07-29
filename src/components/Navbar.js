@@ -94,10 +94,12 @@ export default function Navbar() {
             </button>
           </div>
           <div className="btn-container" id='nav-pc-btn-container'>
-            <button className='btn'>
-              <i className="fa-solid fa-file"></i>
-              Resume
-            </button>
+            <a target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1b0fp6hYxESz_TBbp4kD3MAgnikOG2srv/view?usp=sharing">
+              <button className='btn'>
+                <i className="fa-solid fa-file"></i>
+                Resume
+              </button>
+            </a>
             <a target='_blank' rel='noreferrer' href="https://github.com/RitbanBarua">
               <button className='btn'>
                 <i className="fa-brands fa-github"></i>
@@ -116,10 +118,12 @@ export default function Navbar() {
         <div className="container" id="nav-dropdown-container">
           <div id="empty">
             <div className="btn-container" id='nav-dropdown-btn-container'>
-              <button className='btn'>
-                <i className="fa-solid fa-file"></i>
-                Resume
-              </button>
+              <a target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1b0fp6hYxESz_TBbp4kD3MAgnikOG2srv/view?usp=sharing">
+                <button className='btn'>
+                  <i className="fa-solid fa-file"></i>
+                  Resume
+                </button>
+              </a>
               <a target='_blank' rel='noreferrer' href="https://github.com/RitbanBarua">
                 <button className='btn'>
                   <i className="fa-brands fa-github"></i>

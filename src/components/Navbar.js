@@ -94,7 +94,7 @@ export default function Navbar() {
             </button>
           </div>
           <div className="btn-container" id='nav-pc-btn-container'>
-            <a target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1b0fp6hYxESz_TBbp4kD3MAgnikOG2srv/view?usp=sharing">
+            <a target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1rQOwGtOV3hYXHe1oMSSrCGLhZMDv2ozX/view?usp=sharing">
               <button className='btn'>
                 <i className="fa-solid fa-file"></i>
                 Resume

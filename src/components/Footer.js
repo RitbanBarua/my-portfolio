@@ -5,7 +5,7 @@ export default function Footer() {
         <>
             <footer>
                 <div className="container" id="footer-container">
-                    © 2023 - All rights reserved. Created with ❤️ by
+                    © 2024 - All rights reserved. Created with ❤️ by
                     {' '}<a target='_blank' rel='noreferrer' href="https://github.com/RitbanBarua">Ritban Barua</a>
                 </div>
             </footer>

@@ -11,7 +11,7 @@ export default function Intro() {
                     <div className='reveal' id="intro-left">
                         <TypedJS strings={[`<h1>Hi, My Name Is <span id="name">Ritban Barua</span></h1>`, `<h1>And I am a passionate <span id="role">Web Developer</span></h1>`]} />
                         <div className="btn-container" id="intro-btn-container">
-                            <a target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1b0fp6hYxESz_TBbp4kD3MAgnikOG2srv/view?usp=sharing">
+                            <a target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1rQOwGtOV3hYXHe1oMSSrCGLhZMDv2ozX/view?usp=sharing">
                                 <button className='btn'>
                                     <i className="fa-solid fa-file"></i>
                                     Resume
